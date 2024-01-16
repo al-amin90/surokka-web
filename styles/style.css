@@ -38,6 +38,14 @@ a {
   background-color: var(--main-color);
 }
 
+.common-heading {
+  font-size: 2rem;
+  color: rgb(33, 37, 41);
+  font-weight: 400;
+  padding-left: 1.5rem;
+  border-left: 0.5rem solid rgb(255, 72, 60);
+}
+
 /* nav style is here  */
 nav {
   display: flex;
@@ -247,6 +255,45 @@ nav {
 /*------------- process of  vaccine style is here -------------- */
 .process-vaccin {
   margin: 10rem 0;
+  padding: 3rem;
+  box-shadow: 0 4px 4px rgba(185, 185, 185, 0.25);
+}
+
+.vaccin-cards {
+  margin-top: 6rem;
+  display: flex;
+  text-align: center;
+  gap: 3rem;
+}
+
+.vaccin-card {
+  flex: 1;
+}
+
+.vaccin-card h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgb(33, 37, 41);
+  margin: 1rem 0 2rem;
+}
+
+.vaccin-card p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: rgb(33, 37, 41);
+  margin: 0 0 1rem;
+  line-height: 2.3rem;
+}
+/*---------------- links style is here ----------- */
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.links h3 {
+  color: rgb(33, 37, 41);
+  font-size: 1.6rem;
+  text-align: center;
 }
 
 /*-------------
@@ -288,7 +335,11 @@ nav {
 }
 
 @media screen and (max-width: 575px) {
-  .infos {
+  .common-heading {
+    font-size: 1.3rem;
+  }
+  .infos,
+  .vaccin-cards {
     flex-direction: column;
   }
 
@@ -299,5 +350,12 @@ nav {
   .info h5 {
     padding-bottom: 0.5rem;
     border-bottom: 1px solid rgb(33, 37, 41, 0.5);
+  }
+  .process-vaccin {
+    padding: 1rem;
+  }
+
+  .links {
+    flex-direction: column;
   }
 }
