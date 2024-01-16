@@ -277,7 +277,8 @@ nav {
   margin: 1rem 0 2rem;
 }
 
-.vaccin-card p {
+.vaccin-card p,
+.mujib-content p {
   font-size: 1.6rem;
   font-weight: 400;
   color: rgb(33, 37, 41);
@@ -294,6 +295,25 @@ nav {
   color: rgb(33, 37, 41);
   font-size: 1.6rem;
   text-align: center;
+}
+
+/*------------------ mujib 100 style is here -------------------- */
+.mujib-container {
+  margin: 6rem 0 2rem;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.mujib-content h3 {
+  font-size: 1.7rem;
+  color: #092753;
+  cursor: pointer;
+}
+
+.mujib-content h3:hover {
+  text-decoration: underline;
 }
 
 /*-------------
