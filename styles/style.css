@@ -22,6 +22,10 @@ a {
   color: rgba(9, 39, 83, 0.7);
 }
 
+ul li {
+  list-style: none;
+}
+
 /* common style is here  */
 .container {
   margin: 0 auto;
@@ -316,6 +320,26 @@ nav {
   text-decoration: underline;
 }
 
+/* ------------- footer style is here ---------------- */
+footer {
+  background-color: #f26d3e;
+  min-height: 8rem;
+  padding: 8rem 0 4rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content p,
+.footer-content li {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: white;
+  font-weight: 600;
+}
+
 /*-------------
 ------- responsive media quarry is here ------
 ------------ */
@@ -329,6 +353,12 @@ nav {
   }
   .nav-mobile-content {
     display: block;
+  }
+
+  .mujib-container {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2.5rem;
   }
 }
 
@@ -351,6 +381,11 @@ nav {
   .left-content,
   .banner-section {
     height: auto;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    row-gap: 2rem;
   }
 }
 
