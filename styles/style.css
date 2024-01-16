@@ -207,6 +207,48 @@ nav {
   width: 60%;
 }
 
+/*----------- help info style is here------------  */
+.infos {
+  padding: 1.6rem 3rem;
+  box-shadow: 0 4px 4px rgba(185, 185, 185, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -2rem;
+  text-align: center;
+  /* flex-basis: 14rem; */
+  row-gap: 3rem;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 0.6rem;
+}
+.info h4 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgb(13, 123, 44);
+  line-height: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+.info h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(9, 39, 83);
+}
+
+.vertical-line {
+  content: "";
+  width: 1px;
+  height: 100%;
+  padding: 2.5rem 0;
+  margin: 0 10px;
+  background-color: rgb(33, 37, 41, 0.5);
+}
+
+/*------------- process of  vaccine style is here -------------- */
+.process-vaccin {
+  margin: 10rem 0;
+}
+
 /*-------------
 ------- responsive media quarry is here ------
 ------------ */
@@ -242,5 +284,20 @@ nav {
   .left-content,
   .banner-section {
     height: auto;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .infos {
+    flex-direction: column;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .info h5 {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgb(33, 37, 41, 0.5);
   }
 }
