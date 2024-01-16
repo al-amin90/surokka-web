@@ -1,9 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700;800&family=Roboto:wght@400;500;700;900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-color: #f26d3e;
+  --primary-color: rgb(9, 39, 83);
+}
+
+a {
+  text-decoration: none;
+  color: rgba(9, 39, 83, 0.7);
+}
+
+/* common style is here  */
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 80%;
+  padding: 0 2rem;
+}
+
+.primary-btn {
+  padding: 1rem 1.3rem;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--main-color);
+}
+
+/* nav style is here  */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-content ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-content ul li {
+  list-style: none;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.nav-content li a:hover {
+  color: var(--primary-color);
+}
+
+.nav-mobile-content {
+  display: none;
+  font-size: 2rem;
+  padding: 0.3rem 1rem;
+  border: 1px solid rgb(69, 69, 69);
+  color: rgb(69, 69, 69);
+  border-radius: 5px;
+}
+
+/* banner style is here  */
+.banner-section {
+  background-image: url(../images/banner-bg.jpg);
+  background-attachment: scroll;
+  background-size: cover;
+  height: 55rem;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  max-width: 79rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  height: 39rem;
+  margin: 0 auto;
+}
+
+.left-content {
+  cursor: pointer;
+  padding: 2.8rem;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 4px rgba(185, 185, 185, 0.25);
+  height: 39rem;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.left-content::before {
+  content: "";
+  border-bottom: 1rem solid rgb(10, 47, 141);
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  border-radius: 5px 5px 0 0;
+  background-color: rgb(134, 44, 44);
+}
+
+.left-content:hover {
+  background-color: #daedff;
+}
+
+.right-content {
+  /* height: 39rem; */
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.vaccine {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.left-content h2 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.left-content p {
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 1rem 0 1.6rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.right-content .card {
+  width: 100%;
+  height: 9rem;
+  padding: 1.6rem;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  cursor: pointer;
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  border-left: 0.9rem solid rgb(10, 47, 141);
+  position: absolute;
+  height: 80%;
+  left: 0;
+  border-radius: 0 5px 5px 0;
+  background-color: rgb(134, 44, 44);
+  transition: all 0.3s ease-in-out;
+}
+
+.card-1:hover {
+  background-color: #dfffda;
+}
+.card-2:hover {
+  background-color: #feffda;
+}
+.card-3:hover {
+  background-color: #dafff2;
+}
+.card-4:hover {
+  background-color: #dafdff;
+}
+.card-1::before {
+  border-color: #0d7b2c;
+}
+.card-2::before {
+  border-color: #d8de00;
+}
+.card-3::before {
+  border-color: #25be88;
+}
+.card-4::before {
+  border-color: #5fc6cc;
+}
+
+.card img {
+  margin-right: 3rem;
+  width: 60%;
+}
+
+/*-------------
+------- responsive media quarry is here ------
+------------ */
+
+@media screen and (max-width: 994px) {
+  .nav-content {
+    display: none;
+  }
+  .nav-logo img {
+    width: 80%;
+  }
+  .nav-mobile-content {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .container,
+  .left-content img {
+    width: 100%;
+  }
+  .nav-logo img {
+    width: 65%;
+  }
+  .left-content h2 {
+    font-size: 2rem;
+  }
+  .banner {
+    flex-direction: column;
+    height: auto;
+    margin: 4rem 0;
+  }
+  .left-content,
+  .banner-section {
+    height: auto;
+  }
 }
